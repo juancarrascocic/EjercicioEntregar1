@@ -4,19 +4,19 @@ using EjercicioEntregar1;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class ClassMetodosTest
     {
         [TestMethod]
         public void TestMethod1()
         {
-            ClassDatos sut = new ClassDatos();
-            sut.texto = "Los numeros son: ";
-            sut.entero1 = 7;
-            sut.entero2 = 16;
+            ClassDatos objeto_datos = new ClassDatos();
+            objeto_datos.texto = "Los numeros son: ";
+            objeto_datos.entero1 = 7;
+            objeto_datos.entero2 = 16;
 
-            ClassMetodos sut2 = new ClassMetodos();
+            ClassMetodos sut = new ClassMetodos();
 
-            String resultado = sut2.MetodoConcatenar(sut);
+            String resultado = sut.MetodoConcatenar(objeto_datos);
             Assert.AreEqual(resultado, "Los numeros son: 7 y 16");
         }
     }
